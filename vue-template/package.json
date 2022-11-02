@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint --ext .json,.js,.vue src",
     "lint:fix": "eslint --ext .json,.js,.vue --fix src",
-    "prepare": "husky install",
+    "prepare": "husky install && degit Byzanteam/jet-scaffolds/deploy deploy",
     "precommit": "lint-staged",
     "commitlint": "commitlint"
   },
@@ -27,6 +27,7 @@
     "@byzanteam/prettier-config": "^1.0.0",
     "@vitejs/plugin-vue": "^3.2.0",
     "@vue/eslint-config-prettier": "^7.0.0",
+    "degit": "^2.8.4",
     "eslint": "^8.26.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.6.0",
