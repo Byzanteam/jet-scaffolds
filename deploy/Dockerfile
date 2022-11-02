@@ -11,7 +11,6 @@ RUN pnpm install
 
 COPY . .
 
-RUN pnpm install
 RUN pnpm run build
 
 FROM nginx:stable-alpine
@@ -19,10 +18,10 @@ FROM nginx:stable-alpine
 RUN mkdir /app
 
 ARG APP_VSN
+ARG APP_NAME
 
 LABEL maintainer=Byzanteam
-# replace app-name
-LABEL jet_app=app-name
+LABEL jet_app=${APP_NAME}
 LABEL jet_app_vsn=${APP_VSN}
 
 COPY --from=builder /srv/dist /app/dist
