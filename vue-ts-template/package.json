@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "vue-tsc --noEmit && eslint --ext .json,.js,.ts,.vue src",
     "lint:fix": "vue-tsc --noEmit && eslint --ext .json,.js,.ts,.vue --fix src",
-    "prepare": "husky install && degit Byzanteam/jet-scaffolds/deploy deploy",
+    "clone:deploy": "degit Byzanteam/jet-scaffolds/deploy deploy",
+    "prepare": "pnpm clone:deploy && husky install",
     "precommit": "lint-staged",
     "commitlint": "commitlint"
   },
