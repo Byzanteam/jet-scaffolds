@@ -6,7 +6,7 @@ RUN npm install -g pnpm
 
 WORKDIR /srv
 
-COPY package.json pnpm-lock.yaml
+COPY package.json pnpm-lock.yaml .
 RUN pnpm install
 
 COPY . .
@@ -26,7 +26,7 @@ LABEL jet_app_vsn=${APP_VSN}
 
 COPY --from=builder /srv/dist /app/dist
 
-COPY nginx/start.sh /app/start-nginx.sh
-COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY deploy/nginx/start.sh /app/start-nginx.sh
+COPY deploy/nginx/nginx.conf /etc/nginx/nginx.conf
 
 ENTRYPOINT ["/app/start-nginx.sh"]
