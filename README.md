@@ -2,15 +2,26 @@
 
 你需要预先安装 degit 工具来复制模版
 
-```
+```bash
 pnpm add -g degit
+
+# OR
+yarn global add degit
+
+# OR
+npm install -g degit
 ```
 
 根据项目需求选择模版（比如 `vue-template`)
 
-```
-# degit git@github.com:user/repo/subdirectory your-project-folder
-degit git@github.com:Byzanteam/jet-scaffolds/vue-template your-project-folder
+```bash
+degit https://github.com/Byzanteam/jet-scaffolds/vue-template your-project-folder
+
+# OR
+
+mkdir your-project-folder
+cd your-project-folder
+degit https://github.com/Byzanteam/jet-scaffolds/vue-template
 ```
 
 > **Note**
