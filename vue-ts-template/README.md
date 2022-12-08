@@ -3,9 +3,6 @@
 ```sh
 pnpm install
 
-# 首次执行时，创建 .env 文件提供环境变量
-pnpm make-env
-
 pnpm dev
 
 # 打包生产环境代码
