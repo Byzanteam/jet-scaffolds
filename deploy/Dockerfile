@@ -19,10 +19,14 @@ RUN mkdir /app
 
 ARG APP_VSN
 ARG APP_NAME
+ARG SOURCE_REPO_URL
+ARG SOURCE_SHA
 
 LABEL maintainer=Byzanteam
 LABEL jet_app=${APP_NAME}
 LABEL jet_app_vsn=${APP_VSN}
+LABEL source_repo_url=${SOURCE_REPO_URL}
+LABEL source_sha=${SOURCE_SHA}
 
 COPY --from=builder /srv/dist /app/dist
 
