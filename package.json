@@ -1,0 +1,7 @@
+{
+  "name": "@byzanteam/jet-scaffolds",
+  "version": "1.0.0",
+  "description": "project template for `npx makes`",
+  "type": "module",
+  "author": "Byzanteam"
+}

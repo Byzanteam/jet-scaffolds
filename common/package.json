@@ -1,0 +1,21 @@
+{
+  "name": "/* @echo name */",
+  "private": true,
+  "version": "0.0.0",
+  "author": "byzanteam",
+  "scripts": {
+    "commitlint": "commitlint"
+  },
+  "prettier": "@byzanteam/prettier-config",
+  "license": "ISC",
+  "devDependencies": {
+    // @if !monorepo
+    "@byzanteam/commitlint-config": "^1.0.0",
+    // @endif
+    "@byzanteam/prettier-config": "^1.0.1",
+    "@commitlint/cli": "^17.4.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
+  }
+}
