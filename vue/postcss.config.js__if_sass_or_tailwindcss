@@ -1,0 +1,8 @@
+module.exports = {
+  plugins: {
+    // @if tailwindcss
+    tailwindcss: {},
+    // @endif
+    autoprefixer: {},
+  },
+}
