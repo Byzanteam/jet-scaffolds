@@ -39,7 +39,6 @@ export default [
   // vue app only
   {
     if: 'vue',
-    name: 'style',
     message: 'Which css resolution do you want?',
     choices: [
       {
@@ -50,6 +49,9 @@ export default [
       {
         title: 'Sass',
         value: 'sass',
+      },
+      {
+        title: 'None',
       },
     ],
   },

@@ -31,11 +31,23 @@
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.2",
     "@vue/tsconfig": "^0.1.3",
+    // @if sass || tailwindcss
+    "autoprefixer": "^10.4.13",
+    // @endif
     "eslint": "^8.26.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.6.0",
+    // @if sass || tailwindcss
+    "postcss": "^8.4.21",
+    // @endif
+    // @if sass
+    "sass": "^1.58.0",
+    // @endif
+    // @if tailwindcss
+    "tailwindcss": "^3.2.4",
+    // @endif
     "typescript": "^4.8.4",
     "vite": "^3.2.0",
     "vue-tsc": "^1.0.9"
