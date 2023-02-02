@@ -18,7 +18,8 @@
   "dependencies": {
     "vue": "^3.2.41",
     // @if router
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "vite-plugin-pages": "^0.28.0"
     // @endif
   },
   "devDependencies": {
