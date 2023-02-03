@@ -15,6 +15,11 @@
 ## Router
 routes 通过 [vite-plugin-pages](https://github.com/johnsoncodehk/volar) 动态生成，如需配置权限路由，需手动修改 routes
 
+```ts
+const finalRoutes = enhanceRoutes(routes)
+createRouter({ routes: finalRoutes })
+```
+
 // @endif
 ## Recommended IDE
 [Volar](https://github.com/johnsoncodehk/volar)
