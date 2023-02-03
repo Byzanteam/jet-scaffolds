@@ -1,0 +1,10 @@
+## Router
+routes 通过 [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) 动态生成，routes 也可手动修改
+
+```ts
+import routes from '~pages'
+
+const finalRoutes = enhanceRoutes(routes)
+createRouter({ routes: finalRoutes })
+```
+enhanceRoutes 内你可以根据业务注入一些 meta 数据，由此可以让路由有更多的能力

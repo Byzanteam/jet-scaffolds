@@ -1,0 +1,4 @@
+## Css
+
+### Tailwindcss
+[配置颜色主题](https://tailwindcss.com/docs/customizing-colors)，间距使用默认定义的，未定义的使用任意值(以[宽度的任意值](https://tailwindcss.com/docs/width#arbitrary-values)为例)
