@@ -24,6 +24,11 @@ createRouter({ routes: finalRoutes })
 enhanceRoutes 内你可以根据业务注入一些 meta 数据，由此可以让路由有更多的能力
 
 // @endif
+// @if auto-import
+## Auto import
+组件默认使用 ElementPlusResolver，参考这里：https://github.com/antfu/unplugin-vue-components#importing-from-ui-libraries，查看对应组件库的 resolver
+
+// @endif
 ## Recommended IDE
 - [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 - [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
