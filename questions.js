@@ -1,12 +1,4 @@
 export default [
-  /**
-   * use changesets to manage the publication of sub-packages
-   */
-  {
-    name: 'monorepo',
-    message: 'Is project a monorepo?',
-    choices: [{ title: 'No' }, { title: 'Yes', value: 'monorepo' }],
-  },
   {
     name: 'type',
     message: 'Which type is this project?',
@@ -19,6 +11,13 @@ export default [
       {
         title: 'Vue App',
         value: 'vue',
+      },
+      /**
+       * use changesets to manage the publication of sub-packages
+       */
+      {
+        title: 'Monorepo App',
+        value: 'monorepo',
       },
       {
         title: 'JS/TS Lib',
