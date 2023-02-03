@@ -1,0 +1,2 @@
+## Auto import
+组件默认使用 ElementPlusResolver，参考这里：https://github.com/antfu/unplugin-vue-components#importing-from-ui-libraries，查看对应组件库的 resolver
