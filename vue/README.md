@@ -13,7 +13,7 @@
 // @endif
 // @if router
 ## Router
-routes 通过 [vite-plugin-pages](https://github.com/johnsoncodehk/volar) 动态生成，routes 也可手动修改
+routes 通过 [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) 动态生成，routes 也可手动修改
 
 ```ts
 import routes from '~pages'
