@@ -35,6 +35,13 @@ export default [
     message: 'Do you want to use vue-router?',
     choices: [{ title: 'Yes', value: 'router' }, { title: 'No' }],
   },
+  {
+    // vue app only
+    if: 'vue',
+    message: 'Do you want to use auto-import?',
+    hint: 'use unplugin-auto-import to auto import api of vue or vue-router, use unplugin-vue-components to auto import component',
+    choices: [{ title: 'Yes', value: 'auto-import' }, { title: 'No' }],
+  },
   // vue app only
   {
     if: 'vue',
