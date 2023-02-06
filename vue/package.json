@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@byzanteam/eslint-config-vue-ts": "latest",
+    "@byzanteam/tsconfig": "latest",
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/node": "^18.11.8",
     "@vitejs/plugin-vue": "^3.2.0",
