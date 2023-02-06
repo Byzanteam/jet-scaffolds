@@ -17,4 +17,22 @@ module.exports = {
     'import/core-modules': ['envs'],
     // @endif
   },
+  // @if tailwindcss
+  rules: {
+    'vue/no-static-inline-styles': [
+      'error',
+      {
+        allowBinding: false,
+      },
+    ],
+    'vue/no-restricted-block': [
+      'error',
+      {
+        element: 'style',
+        message:
+          'this project use tailwind, do not use <style> block in this project',
+      },
+    ],
+  }
+  // @endif
 }
