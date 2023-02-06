@@ -8,7 +8,6 @@
     "precommit": "pnpm run --filter './packages/**' precommit --parallel --no-cache"
   },
   "devDependencies": {
-    "@byzanteam/commitlint-config-monorepo": "^1.0.3",
-    "commitlint-plugin-workspace-scopes": "^1.1.0"
+    "@byzanteam/commitlint-config-monorepo": "^1.0.3"
   }
 }
