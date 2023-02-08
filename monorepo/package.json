@@ -4,8 +4,7 @@
     "dev": "pnpm run --filter './packages/**' dev",
     "lint": "pnpm run --filter './packages/**' lint",
     "test": "pnpm run --filter './packages/**' test",
-    "prepare": "pnpm run --filter './packages/**' prepare",
-    "precommit": "pnpm run --filter './packages/**' precommit --parallel --no-cache"
+    "precommit": "pnpm run --filter './packages/**' precommit"
   },
   "devDependencies": {
     "@byzanteam/commitlint-config-monorepo": "^1.0.3"

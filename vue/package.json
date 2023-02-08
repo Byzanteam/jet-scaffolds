@@ -9,7 +9,6 @@
     "preview": "vite preview",
     "lint": "vue-tsc --noEmit && eslint --ext .js,.ts,.vue src",
     "lint:fix": "vue-tsc --noEmit && eslint --ext .js,.ts,.vue --fix src",
-    "prepare": "husky install",
     "precommit": "lint-staged"
   },
   "lint-staged": {
