@@ -1,10 +1,17 @@
 ## Router
-routes 通过 [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) 动态生成，routes 也可手动修改
+routes 通过 [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) 动态生成
 
+### 常见问题
+
+* Q: 自动生成路由的规则是什么样子的？支持 vue-router 的哪些能力?
+  * A: 我们使用的是[nuxt 风格](https://nuxtjs.org/docs/features/file-system-routing)的生成方式
+* Q: 如果要做路由权限应该怎么做?
+  * A: 见附录的使用方式，可以通过 enhanceRoutes 函数对生成的路由进行调整（注入路由权限信息）
+
+### 附录
 ```ts
 import routes from '~pages'
 
 const finalRoutes = enhanceRoutes(routes)
 createRouter({ routes: finalRoutes })
 ```
-enhanceRoutes 内你可以根据业务注入一些 meta 数据，由此可以让路由有更多的能力
