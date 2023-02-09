@@ -15,6 +15,10 @@
     "src/**/*.{ts,vue}": "eslint --fix"
   },
   "dependencies": {
+    // @if i18n
+    "i18next": "^22.4.9",
+    "i18next-vue": "^2.1.1",
+    // @endif
     "vue": "^3.2.41",
     // @if router
     "vue-router": "^4.1.6"
