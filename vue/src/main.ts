@@ -2,13 +2,19 @@ import { createApp } from 'vue'
 
 import './style.css'
 import App from './App.vue'
+// @if i18n
+import locale from './locale'
+// @endif
 // @if router
 import router from './router'
 // @endif
 
+const app = createApp(App)
+
+// @if i18n
+app.use(locale)
+// @endif
 // @if router
-createApp(App).use(router).mount('#app')
+app.use(router)
 // @endif
-// @if !router
-createApp(App).mount('#app')
-// @endif
+app.mount('#app')

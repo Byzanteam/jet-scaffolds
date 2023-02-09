@@ -32,15 +32,24 @@ export default [
   {
     // vue app only
     if: 'vue',
-    message: 'Do you want to use vue-router?',
-    choices: [{ title: 'Yes', value: 'router' }, { title: 'No' }],
-  },
-  {
-    // vue app only
-    if: 'vue',
-    message: 'Do you want to use auto-import?',
-    hint: 'use unplugin-auto-import to auto import api of vue or vue-router, use unplugin-vue-components to auto import component',
-    choices: [{ title: 'Yes', value: 'auto-import' }, { title: 'No' }],
+    multiple: true,
+    message: 'What features do you want to use for this project?',
+    choices: [
+      {
+        title: 'Vue Router',
+        value: 'router',
+        selected: true,
+      },
+      {
+        title: 'Auto Import',
+        value: 'auto-import',
+        hint: 'use unplugin-auto-import to auto import api of vue or vue-router, use unplugin-vue-components to auto import component',
+      },
+      {
+        title: 'I18n',
+        value: 'i18n',
+      },
+    ],
   },
   // vue app only
   {

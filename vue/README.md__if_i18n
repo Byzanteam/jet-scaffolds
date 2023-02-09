@@ -1,0 +1,24 @@
+## I18n
+项目使用[i18next](https://www.i18next.com/)和(https://i18next.github.io/i18next-vue/)支持 i18n
+
+### Instructions
+- 如何使用：https://i18next.github.io/i18next-vue/guide/started.html#simple-usage
+- 如何在 setup 中使用：https://i18next.github.io/i18next-vue/guide/composition-api.html
+- 项目目前只直接支持中文翻译，如需支持多语言：
+  - 修改初始化的 options 支持多种语言的翻译：https://www.i18next.com/overview/configuration-options
+  - 切换语言：https://www.i18next.com/overview/api#languages
+
+### Extra Features
+- `__t__` 可以直接省略
+  在 zh_CN.json 中定义翻译内容：
+  ```json
+    {
+      "vue_template": {
+        "__t__": "vue 模板"
+      }
+    }
+  ```
+  在页面中显示 「vue 模板」
+  ```vue
+  {{ $t('vue_template') }}
+  ```
