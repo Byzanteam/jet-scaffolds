@@ -1,0 +1,5 @@
+@tailwind utilities;
+
+page {
+  @apply h-full;
+}

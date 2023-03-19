@@ -1,0 +1,18 @@
+{
+  "miniprogramRoot": "./dist",
+  "projectname": "/* @echo name */",
+  "description": "scaffold for miniprogram",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "enhance": true,
+    "compileHotReLoad": false,
+    "postcss": false,
+    "minified": true,
+    "useIsolateContext": true,
+    "minifyWXSS": true,
+    "bigPackageSizeSupport": true
+  },
+  "compileType": "miniprogram"
+}
