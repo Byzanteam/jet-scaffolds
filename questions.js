@@ -13,6 +13,14 @@ export default [
         value: 'vue',
       },
       /**
+       * use taro
+       * use beta-preview workflow
+       */
+      {
+        title: 'Mini Program',
+        value: 'miniprogram',
+      },
+      /**
        * use changesets to manage the publication of sub-packages
        */
       {

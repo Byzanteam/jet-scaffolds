@@ -1,0 +1,62 @@
+name: Preview
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: preview
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    name: upload
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+        with:
+          fetch-depth: 20
+      - uses: actions/setup-node@main
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.1.0
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v3
+        id: use-pnpm-cache # use this to check for `cache-hit` (`steps.pnpm-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-
+
+      - run: pnpm install
+      - run: pnpm add miniprogram-ci -g
+
+      - id: get-app-info
+        uses: byzanteam/jet-actions/fe-get-app-info@main
+
+      - name: Retrieve the secret and decode it to a file
+        env:
+          MINIPROGRAM_CI_PRIVATE_KEY_BASE64: ${{ secrets.MINIPROGRAM_CI_PRIVATE_KEY_BASE64 }}
+        run: |
+          echo $MINIPROGRAM_CI_PRIVATE_KEY_BASE64 | base64 --decode > private.key
+      - run: pnpm build
+      - id: get-appid
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const projectConfig = require('project.config.json')
+            return projectConfig.appid
+
+      - run: |
+          miniprogram-ci upload \
+          --project-path dist/ \
+          --appid "${{ steps.get-appid.outputs.result }}" \
+          --private-key-path private.key \
+          --upload-version "${{ steps.get-app-info.outputs.version }}-dev" \
+          --upload-description "upload from GitHub actions (${{ github.sha }})"
