@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "author": "byzanteam",
   "scripts": {
+    "prepare": "husky install",
     "commitlint": "commitlint"
   },
   "prettier": "@byzanteam/prettier-config",

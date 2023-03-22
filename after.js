@@ -11,7 +11,7 @@ export default async function({ run, properties, prompts, ansiColors }) {
 
   // setup git and husky
   await run('git', ['init', '-b', 'main'])
-  await run('pnpm', ['dlx', 'husky', 'install'])
+  await run('chmod', ['-R', '+x', '.husky']);
 
   if (result) {
     await run('pnpm', 'install')
