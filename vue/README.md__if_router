@@ -6,12 +6,47 @@ routes 通过 [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages)
 * Q: 自动生成路由的规则是什么样子的？支持 vue-router 的哪些能力?
   * A: 我们使用的是[nuxt 风格](https://nuxtjs.org/docs/features/file-system-routing)的生成方式
 * Q: 如果要做路由权限应该怎么做?
-  * A: 见附录的使用方式，可以通过 enhanceRoutes 函数对生成的路由进行调整（注入路由权限信息）
+  * A: 见附录的使用方式
 
 ### 附录
+- 在需要权限控制的页面中加入自定义的 Route Data
+```
+<route>
+{
+  meta: {
+    roles: ['admin', 'editor']
+  }
+}
+</route>
+```
+tips：若路由提供了 roles 则代表对指定的角色有权限，否则对所有的角色都有权限
+
+- 将路由分为 constantRoutes 和 asyncRoutes
 ```ts
 import routes from '~pages'
 
-const finalRoutes = enhanceRoutes(routes)
-createRouter({ routes: finalRoutes })
+const { constantRoutes, asyncRoutes } = filterRoutes(routes)
+createRouter({ routes: constantRoutes })
 ```
+
+- 管理用户的状态，包括 token、roles 等信息
+
+- 管理路由的状态，包括 routes、currentRolesAsyncRoutes
+```ts
+function generateRoutes(roles) {
+  currentRolesAsyncRoutes = filterAsyncRoutes(asyncRoutes, roles)
+  routes = constantRoutes.concat(currentRolesAsyncRoutes)
+}
+```
+
+- 角色每次变更后更新路由
+```ts
+watch(userInfo.roles, roles=> {
+  resetRoutes()
+  if(roles.length) {
+    generateRoutes(roles)
+    addRoutes(currentRolesAsyncRoutes)
+  }
+}, { immediate: true })
+```
+tips：token 和 roles 都必须使用本地存储，这样才能保证每次刷新都去更新路由
