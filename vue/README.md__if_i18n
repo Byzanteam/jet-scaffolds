@@ -3,7 +3,7 @@
 
 ### Instructions
 - 如何使用：https://i18next.github.io/i18next-vue/guide/started.html#simple-usage
-- 如何在 setup 中使用：https://i18next.github.io/i18next-vue/guide/composition-api.html
+- 如何在 setup 和 ts 文件中使用：[直接使用 i18next 提供的 t 方法](https://www.i18next.com/overview/api#t)
 - 项目目前只直接支持中文翻译，如需支持多语言：
   - 修改初始化的 options 支持多种语言的翻译：https://www.i18next.com/overview/configuration-options
   - 切换语言：https://www.i18next.com/overview/api#languages
