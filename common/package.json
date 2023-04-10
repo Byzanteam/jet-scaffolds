@@ -7,7 +7,6 @@
     "prepare": "husky install",
     "commitlint": "commitlint"
   },
-  "prettier": "@byzanteam/prettier-config",
   "license": "ISC",
   "devDependencies": {
     // @if !monorepo

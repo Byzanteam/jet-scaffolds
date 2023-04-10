@@ -37,6 +37,9 @@
     // @if sass || tailwindcss
     "postcss": "^8.4.21",
     // @endif
+    // @if tailwindcss
+    "prettier-plugin-tailwindcss": "^0.2.7",
+    // @endif
     // @if sass
     "sass": "^1.58.0",
     // @endif
