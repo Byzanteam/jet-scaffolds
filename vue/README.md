@@ -23,3 +23,8 @@ pnpm build
 pnpm build
 pnpm preview
 ```
+
+## Build Action
+`build-image.yml` 如果不是 skylark 的项目需要做出以下调整
+* jet 项目中 registries 的 `${{ secrets.ALIYUN_SKYLARK_REGISTRY }}` -> `${{ secrets.ALIYUN_JET_REGISTRY }}`
+* 非 jet 项目，则移除 registries 中的 `${{ secrets.ALIYUN_SKYLARK_REGISTRY }}` 这一行
