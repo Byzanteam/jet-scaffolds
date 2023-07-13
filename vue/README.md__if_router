@@ -9,17 +9,22 @@ routes 通过 [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages)
   * A: 见附录的使用方式
 
 ### 附录
-- 在需要权限控制的页面中加入自定义的 Route Data
+- 路由配置
+路由重定向等配置都是在路由对应vue页面的`<route></route>`中直接配置，配置支持`json yaml`格式，如下是做页面重定向的配置
 ```
-<route>
-{
-  meta: {
-    roles: ['admin', 'editor']
-  }
-}
+<route lang="yaml">
+redirect: 'home'
 </route>
 ```
-tips：若路由提供了 roles 则代表对指定的角色有权限，否则对所有的角色都有权限
+- 在需要权限控制的页面中加入自定义的 Route Data
+```
+<route lang="yaml">
+meta:
+  - 'admin'
+  - 'editor'
+</route>
+```
+tips：如上，该页面路由提供了 roles 则代表对指定的角色有权限，否则对所有的角色都有权限
 
 - 将路由分为 constantRoutes 和 asyncRoutes
 ```ts
