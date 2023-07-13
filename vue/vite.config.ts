@@ -37,7 +37,10 @@ export default defineConfig(({ mode }) => {
       Components({
         resolvers: [ElementPlusResolver()],
         dts: '.typings/components.d.ts',
-        dirs: ['src/components'],
+        globs: [
+          'src/components/*.{vue,tsx}',
+          'src/components/*/index.{vue,tsx}',
+        ], // 只把 components/xxx.vue components/floder/index.vue 作为全局组件
       }),
       // @endif
       // @if router
