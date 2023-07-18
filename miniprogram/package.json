@@ -27,8 +27,8 @@
     "@tarojs/runtime": "3.6.2",
     "@tarojs/shared": "3.6.2",
     "@tarojs/taro": "3.6.2",
-    "pinia": "^2.0.10",
-    "vue": "^3.2.24"
+    "pinia": "~2.0.10",
+    "vue": "~3.2.24"
   },
   "lint-staged": {
     "src/**/*.{ts,vue}": "eslint --fix"
