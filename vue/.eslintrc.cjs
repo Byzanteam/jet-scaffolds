@@ -11,6 +11,7 @@ module.exports = {
   // @if !auto-import
   extends: ['@byzanteam/eslint-config-vue-ts'],
   // @endif
+  parserOptions: { tsconfigRootDir: __dirname },
   settings: {
     // @if router
     'import/core-modules': ['envs', '~pages'],
