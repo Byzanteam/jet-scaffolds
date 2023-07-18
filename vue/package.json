@@ -16,24 +16,27 @@
   },
   "dependencies": {
     // @if i18n
-    "i18next": "^22.4.9",
-    "i18next-vue": "^2.1.1",
+    "i18next": "~22.4.9",
+    "i18next-vue": "~2.1.1",
     // @endif
-    "vue": "^3.2.41",
+    "vue": "~3.3.4",
     // @if router
-    "vue-router": "^4.1.6"
+    "vue-router": "~4.1.6"
     // @endif
   },
   "devDependencies": {
-    "@byzanteam/eslint-config-vue-ts": "latest",
-    "@byzanteam/tsconfig": "latest",
+    "@byzanteam/eslint-config-vue-ts": "^4.0.0",
+    "@byzanteam/tsconfig": "^3.0.0",
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/node": "^18.11.8",
-    "@vitejs/plugin-vue": "^3.2.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.0",
+    "vue-tsc": "^1.8.3",
+    "eslint": "^8.44.0",
+    "typescript": "^5.0.2",
     // @if sass || tailwindcss
     "autoprefixer": "^10.4.13",
     // @endif
-    "eslint": "^8.26.0",
     // @if sass || tailwindcss
     "postcss": "^8.4.21",
     // @endif
@@ -46,15 +49,12 @@
     // @if tailwindcss
     "tailwindcss": "^3.2.4",
     // @endif
-    "typescript": "^4.8.4",
     // @if auto-import
     "unplugin-auto-import": "^0.13.0",
     "unplugin-vue-components": "^0.23.0",
     // @endif
-    "vite": "^3.2.0",
     // @if router
-    "vite-plugin-pages": "^0.28.0",
+    "vite-plugin-pages": "^0.28.0"
     // @endif
-    "vue-tsc": "^1.0.9"
   }
 }
