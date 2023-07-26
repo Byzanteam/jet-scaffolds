@@ -22,17 +22,27 @@ export default [
       },
       /**
        * use changesets to manage the publication of sub-packages
+       * use turbo to manage project
        */
       {
         title: 'Monorepo App',
         value: 'monorepo',
       },
+      /**
+       * use vite build package
+       * use changesets to manage package version
+       */
       {
-        title: 'JS/TS Lib',
-        value: 'js',
+        title: 'Lib for Browser',
+        value: 'lib',
       },
+      /**
+       * use tsup build package
+       * use changesets to manage package version
+       * tsconfig - moduleResolution use "Node"
+       */
       {
-        title: 'Node Tool',
+        title: 'Lib for Node',
         value: 'node',
       },
     ],
@@ -76,6 +86,15 @@ export default [
       {
         title: 'None',
       },
+    ],
+  },
+  // lib mode
+  {
+    if: 'lib',
+    message: 'which frame this lib dependences?',
+    choices: [
+      { title: 'vue', value: 'vueLib' },
+      { title: 'none', value: 'noFrame' },
     ],
   },
 ]
