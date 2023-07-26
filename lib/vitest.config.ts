@@ -6,5 +6,6 @@ export default defineConfig({
         testTimeout: 10000,
         environment: "jsdom",
         include: ["**/*.(test|spec).[jt]s?(x)"],
+        passWithNoTests: true,
     },
 });
