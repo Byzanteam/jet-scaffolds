@@ -10,6 +10,7 @@
       // @if noFrame
       "moduleResolution": "Bundler",
       // @endif
+      "removeComments": false,
       "baseUrl": ".",
       "paths": {
         "@/*": ["./src/*"]
