@@ -6,4 +6,4 @@
 
 如需将该仓库发布到 npm，需要到 `.github/workflows/publish` 中开启最后两项，且在 `settings - Actions - secrets and variables - Actions` 中添加需要的[token](https://docs.npmjs.com/creating-and-viewing-access-tokens)
 
-> note: secrets 会首先查找项目中的配置，再向上查找项目所属组织的配置，如果组织中已经配置，可以不用在项目中再次配置
+> note: secrets 会首先查找项目中的配置，再向上查找项目所属组织的配置，如果组织中已经配置并且本项目获得 secret 的权限，可以不用在项目中再次配置
