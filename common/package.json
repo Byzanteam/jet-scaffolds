@@ -8,6 +8,7 @@
     "commitlint": "commitlint"
   },
   "license": "ISC",
+  "packageManager": "pnpm@8.14.1",
   "devDependencies": {
     // @if !monorepo
     "@byzanteam/commitlint-config": "^1.0.0",
