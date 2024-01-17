@@ -25,15 +25,15 @@
     // @endif
   },
   "devDependencies": {
-    "@byzanteam/eslint-config-vue-ts": "^4.0.0",
+    "@byzanteam/eslint-config-vue-ts": "^4.1.x",
     "@byzanteam/tsconfig": "^3.0.0",
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/node": "^18.11.8",
     "@vitejs/plugin-vue": "^4.2.3",
     "vite": "^4.4.0",
     "vue-tsc": "^1.8.3",
-    "eslint": "^8.44.0",
-    "typescript": "^5.0.2",
+    "eslint": "^8.56.x",
+    "typescript": "^5.0.x",
     // @if sass || tailwindcss
     "autoprefixer": "^10.4.13",
     // @endif
