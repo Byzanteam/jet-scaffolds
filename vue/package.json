@@ -14,6 +14,7 @@
   "lint-staged": {
     "src/**/*.{ts,vue}": "eslint --fix"
   },
+  "type": "module",
   "dependencies": {
     // @if i18n
     "i18next": "~22.4.9",
