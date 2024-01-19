@@ -38,12 +38,12 @@
   // @endif
   "devDependencies": {
     // @if vueLib
-    "@byzanteam/eslint-config-vue-ts": "^4.0.0",
+    "@byzanteam/eslint-config-vue-ts": "4.0.3",
     "@vitejs/plugin-vue": "^4.2.3",
     "vue-tsc": "^1.8.3",
     // @endif
     // @if noFrame
-    "@byzanteam/eslint-config-ts": "^3.0.0",
+    "@byzanteam/eslint-config-ts": "3.0.3",
     // @endif
     "@byzanteam/tsconfig": "^3.0.0",
     "@byzanteam/commitlint-config": "^1.0.4",
