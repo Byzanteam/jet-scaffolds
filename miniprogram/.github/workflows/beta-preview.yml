@@ -21,13 +21,11 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7.1.0
+      - uses: pnpm/action-setup@master
       - name: Get pnpm store directory
         id: pnpm-cache
         run: echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
-      - uses: actions/cache@v3
+      - uses: actions/cache@main
         id: use-pnpm-cache # use this to check for `cache-hit` (`steps.pnpm-cache.outputs.cache-hit != 'true'`)
         with:
           path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
@@ -47,7 +45,7 @@ jobs:
           echo $MINIPROGRAM_CI_PRIVATE_KEY_BASE64 | base64 --decode > private.key
       - run: pnpm build
       - id: get-appid
-        uses: actions/github-script@v6
+        uses: actions/github-script@main
         with:
           script: |
             const projectConfig = require('project.config.json')

@@ -29,13 +29,13 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@master
         with:
           version: 7.1.0
       - name: Get pnpm store directory
         id: pnpm-cache
         run: echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
-      - uses: actions/cache@v3
+      - uses: actions/cache@main
         id: use-pnpm-cache # use this to check for `cache-hit` (`steps.pnpm-cache.outputs.cache-hit != 'true'`)
         with:
           path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
