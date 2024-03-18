@@ -25,11 +25,12 @@
     // @endif
   },
   "devDependencies": {
-    "@byzanteam/eslint-config-vue-ts": "4.0.3",
+    "@byzanteam/eslint-config-vue-ts": "^4.2.x",
     "@byzanteam/tsconfig": "^3.0.0",
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/node": "^18.11.8",
     "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/compiler-sfc": "^3.3.x",
     "vite": "^4.4.0",
     "vue-tsc": "^1.8.3",
     "eslint": "^8.44.0",
@@ -41,7 +42,7 @@
     "postcss": "^8.4.21",
     // @endif
     // @if tailwindcss
-    "prettier-plugin-tailwindcss": "^0.2.7",
+    "prettier-plugin-tailwindcss": "^0.5.x",
     // @endif
     // @if sass
     "sass": "^1.58.0",
