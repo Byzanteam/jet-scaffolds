@@ -11,9 +11,6 @@
     "lint:fix": "vue-tsc --noEmit && eslint --ext .js,.ts,.vue --fix src",
     "precommit": "lint-staged"
   },
-  "lint-staged": {
-    "src/**/*.{ts,vue}": "eslint --fix"
-  },
   "dependencies": {
     // @if i18n
     "i18next": "~22.4.9",
