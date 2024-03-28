@@ -1,0 +1,10 @@
+*
+!public
+!src
+!package.json
+!tsconfig.json
+!next.config.mjs
+!tailwindcss.config.ts
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!.env.production

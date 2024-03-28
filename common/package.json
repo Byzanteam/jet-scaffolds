@@ -11,7 +11,8 @@
   "devDependencies": {
     // @if !monorepo
     "@byzanteam/commitlint-config": "^1.0.0",
-    // @else
+    // @endif
+    // @if monorepo
     "@byzanteam/commitlint-config-monorepo": "^1.0.3",
     // @endif
     "@byzanteam/prettier-config": "^1.1.0",

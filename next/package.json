@@ -1,7 +1,4 @@
 {
-  "name": "next",
-  "version": "0.1.0",
-  "private": true,
   "type": "module",
   "scripts": {
     "dev": "next dev",
@@ -16,7 +13,7 @@
     "next": "14.1.4"
   },
   "devDependencies": {
-    "@byzanteam/tsconfig": "^3.1.0",
+    "@byzanteam/tsconfig": "^3.1.1",
     "@byzanteam/eslint-config-react-ts": "^2.1.0",
     "@byzanteam/prettier-config": "^1.1.0",
     "@rushstack/eslint-patch": "^1.6.1",

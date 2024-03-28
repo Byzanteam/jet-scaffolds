@@ -27,8 +27,20 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Assume that the .env.local file already exists locally，or you need
+touch it
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+# deploy with docker
+docker run -v ./.env.local:/app/app/.env.local -p :3000 imageName
+```
+
+### .env.local
+
+show your project local environment here
+
+| environment name | description  | default value |
+| -- | -- | -- |
+| ENV_NAME | description | defaultValue if has |
