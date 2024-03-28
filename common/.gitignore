@@ -7,12 +7,20 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# dependences
 node_modules
+
+# testing
+/coverage
+
+# production
 deploy_versions
 dist
 dist-ssr
 .typings
 *.local
+.next
+next-env.d.ts
 
 # Editor directories and files
 .idea

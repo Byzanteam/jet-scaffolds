@@ -1,4 +1,4 @@
 {
-  "src/**/*.{ts,tsx,vue}": "pnpm run lint --fix",
-  "*.{ts,tsx,vue,json,css,scss,md}": "prettier --write --ignore-unknown"
+  "src/**/*.{ts,tsx,js,jsx,vue}": "pnpm run lint --fix",
+  "*.{ts,tsx,js,jsx,vue,json,css,scss,less,md}": "prettier --write --ignore-unknown"
 }
