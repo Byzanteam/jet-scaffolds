@@ -1,6 +1,8 @@
+const config = require('@byzanteam/prettier-config')
+
 module.exports = {
-  ...require('@byzanteam/prettier-config'),
+  ...config,
   // @if tailwindcss
-  plugins: [require('prettier-plugin-tailwindcss')],
+  plugins: [...config.plugins, 'prettier-plugin-tailwindcss'],
   // @endif
 }
