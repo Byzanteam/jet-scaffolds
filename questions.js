@@ -13,6 +13,15 @@ export default [
         value: 'vue',
       },
       /**
+       * use dockerfile for deploy
+       * use build-image action
+       * use .env, .env.local, .env.production
+       */
+      {
+        title: 'Nextjs App',
+        value: 'next',
+      },
+      /**
        * use taro
        * use beta-preview workflow
        */
@@ -69,9 +78,8 @@ export default [
       },
     ],
   },
-  // vue app only
   {
-    if: 'vue',
+    if: 'vue || next',
     message: 'Which css resolution do you want?',
     choices: [
       {
