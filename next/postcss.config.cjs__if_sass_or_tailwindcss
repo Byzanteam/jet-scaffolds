@@ -1,8 +1,8 @@
 module.exports = {
-    plugins: {
-      // @if tailwindcss
-      tailwindcss: {},
-      // @endif
-      autoprefixer: {},
-    },
-  }
+  plugins: {
+    // @if tailwindcss
+    tailwindcss: {},
+    // @endif
+    autoprefixer: {},
+  },
+}
