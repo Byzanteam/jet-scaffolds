@@ -30,8 +30,8 @@ LABEL source_sha=${SOURCE_SHA}
 
 COPY --from=builder /srv/dist /app/dist
 
-COPY deploy/nginx/start.sh /app/start.sh
+COPY .deploy/nginx/start.sh /app/start.sh
 RUN chmod +x /app/start.sh
-COPY deploy/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY .deploy/nginx/nginx.conf /etc/nginx/nginx.conf
 
 ENTRYPOINT ["/app/start.sh"]
