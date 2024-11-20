@@ -1,4 +1,4 @@
-name: Release Docker image for the app
+name: production-build
 
 on:
   release:
@@ -9,7 +9,7 @@ jobs:
     runs-on: image-builder
     steps:
     - name: Checkout
-      uses: actions/checkout@main
+      uses: actions/checkout@v4
 
     - name: Build and push
       uses: byzanteam/jet-actions/fe-build-image@main
